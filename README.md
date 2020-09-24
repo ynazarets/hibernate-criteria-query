@@ -1,12 +1,14 @@
 # hibernate-criteria-query
 
-Given: user has sent the request with URL: 
-`http://localhost:8080/phones?features=ips,nfc&producer=apple,nokia,samsung&color=white,red&minPrice=1200&maxPrice=22943`
+Imagine, that user has sent the request with URL: 
+`http://localhost:8080/phones?countryManufactured=China&producer=apple,nokia,samsung&color=white,red`
 
-1. Implement the `URLParser` class
-1. Add unit tests for `URLParser` class
-1. Run the `init_db.sql` script to generate the schema and insert the data.
-1. Configure Hibernate in this project.
-1. Add required fields and annotations for `Phone` class.
-1. Based on users request - return the data that satisfy the search options (e.g. implement `PhoneDao.findAll` with CriteriaQuery).
-1. Return the top 10 most expensive phones. Use HQL here.
+You have parsed this URL and fetch all required parameters for search. The resulted map looks like:
+```text
+Map<String, String[]> params = new HashMap<>();
+params.put("countryManufactured", new String[]{"China"};
+params.put("producer", new String[]{"apple", "nokia", "samsung"};
+params.put("color", new String[]{"white", "red"};
+```
+
+Your task is to configure Hibernate in this project and implement all PhoneDao methods.
