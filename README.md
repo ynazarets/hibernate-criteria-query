@@ -1,4 +1,4 @@
-# hibernate-criteria-query
+# Hibernate Criteria Query
 
 Imagine, that user has sent the request with URL: 
 `http://localhost:8080/phones?countryManufactured=China&producer=apple,nokia,samsung&color=white,red`
